@@ -44,7 +44,8 @@ define $(PKG)_BUILD
             $(if $(BUILD_STATIC), -static,)$(if $(BUILD_SHARED), -shared,) \
             -prefix '$(PREFIX)/$(TARGET)/qt5' \
             -no-icu \
-            -opengl desktop \
+            -opengl dynamic \
+            -angle \
             -no-glib \
             -accessibility \
             -nomake examples \
